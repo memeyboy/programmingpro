@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>Canvas trial</title>
+</head>
+<body>
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script>
+        var canvas, canvasContext;
+        
+        window.onload = function(){
+            canvas = document.getElementById('gameCanvas')
+            canvasContext = canvas.getContext('2d')
+            
+            setInterval(mainLoop, 1000/50);
+            var ballXpos=0;
+            var ballYpos= 20;
+            var ballXspeed = 0;
+            var ballWidth = 20;
+            var ballHeight =40;
+            
+        }
+   
+    Function mainloop(){
+        colorrect(0,0,canvas.width,canvas.height,'balck')//bg
+        colorRect(ballXpos,ballYpos,ballWidth,ballHeight,'red')//ball
+        
+
+        fuction randomblock(){
+            var RandomblockSize = math.floor (math.random() * ( 5-40 )+ 1); // get rand num betwwen 2 values
+          var newBlockRand = {
+              randblockSize: RandomblockSize,
+              ballXpos: math.floor(math.random)() * (canvas.width - RandlockSize - 0)+ 0,
+              ballYpos: math.floor(math.random)() * (canvas.width - RandlockSize - 0)+ 0,
+              ballXspeed:math.floor(math,random)() * (10- 0)) + 1,
+            ballYspeed:math.floor(math,random)() * (10- 0)) + 1,
+              
+              
+            
+        }
+    }
+    
+    Function colorrect(x,y,w,h,color){
+        canvasContext.fillStyle = color;
+        canvasContext.fillrect(x,y,w,h)
+        ;
+    }
+    Function ballBounce(){
+        ballXpos += ballXspeed;
+        ballYpos += ballYspeed
+        if(ballXpos > canvas.width - ballWidth){// right edge bounce
+            if(ballXpos <0){// left edge bounce
+            ballXspeed *= -1}
+        }
+        if(ballYpos > canvas.height - ballHeight){ // bottom bounce
+            ballYspeed *= -1;
+            if(ballYpos <0){// top bounce
+            ballYspeed *= -1}
+           Function colorext(x,y,w,h,color){
+               canvasContext.fillstyle = color;
+               canvasContext.fillRect(x,y,w,h);
+           }
+        }
+    }
+    
+    
+    
+    
+    
+    </script>
