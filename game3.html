@@ -47,19 +47,19 @@
         }
         
         if(level=="easy"){
-            var totalEnemies = 4
+            var totalEnemies = 3
           
         }
                 
         
         if(level=="medium"){
-            var totalEnemies = 6
+            var totalEnemies = 5
           
         }
                 
         
         if(level=="hard"){
-            var totalEnemies = 8
+            var totalEnemies = 7
           
         }
         
@@ -83,7 +83,7 @@
                 moveEnemies();
             } else {
                 colorRect(0, 0, canvas.width, canvas.height, '#990000'); //end card
-                colorText('game over you scored '+ score,50, 50, 'black', '20px Arial');
+                colorText('game over '+name+' you scored '+ score,50, 50, 'black', '20px Arial');
 //                colorText('game over you scored ' + score, 50, 50, 'black', '20px arial');
                 
             }
@@ -180,8 +180,12 @@
                 if (enemy.xPos + enemy.P_SIZE > playerXpos && enemy.xPos < playerXpos + PLAYER_WIDTH && enemy.yPos + enemy.P_SIZE > playerYpos && enemy.yPos < playerYpos + PLAYER_HEIGHT) {
                     playerYpos = canvas.height - PLAYER_HEIGHT;
                     gameRun = false;
+                
                 }
             });
+        }
+        {
+            Function
         }
 
 
